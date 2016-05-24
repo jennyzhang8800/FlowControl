@@ -25,8 +25,7 @@ this is a repo for FlowControl
    1. 	更改nginx配置文件，把指定uri的页面交给apache处理。（利用的是nginx代理服务器的负载均衡机制）
    
    （1）	配置文件路径为：/edx/app/nginx/sites-available/lms
-
-         输入下面的命令，打开配置文件。
+   输入下面的命令，打开配置文件。
          
        ``` 
       cd /edx/app/nginx/sites-available/lms
