@@ -52,26 +52,27 @@ proxy_set_header X-Forwarded-For $http_x_forwarded_for;
 location ~ ^/flow-control/?$ {
   try_files $uri @proxy_to_apache_lms;
 }
-
 ```
-代码解释：
 
-```
-指定后端服务端的地址为127.0.0.1:8080。重试时间间隔为0
-upstream apache-lms-backend {
-  server 127.0.0.1:8080 fail_timeout=0;
-}
-定义一个命名的（名称为proxy_to_apache_lms） location，在内部定向时使用。proxy_set_header 用于设置重定向的header
-location @proxy_to_apache_lms {
-  proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
-proxy_set_header X-Forwarded-Port $http_x_forwarded_port;
-proxy_set_header X-Forwarded-For $http_x_forwarded_for;
-  proxy_set_header Host $http_host;
+##### 代码解释：
+
+
+  ```
+     # 指定后端服务端的地址为127.0.0.1:8080。重试时间间隔为0
+      upstream apache-lms-backend {
+      server 127.0.0.1:8080 fail_timeout=0;
+     }
+     # 定义一个命名的（名称为proxy_to_apache_lms） location，在内部定向时使用。proxy_set_header 用于设置重定向的header
+     location @proxy_to_apache_lms {
+    proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
+    proxy_set_header X-Forwarded-Port $http_x_forwarded_port;
+    proxy_set_header X-Forwarded-For $http_x_forwarded_for;
+    proxy_set_header Host $http_host;
   
-  proxy_redirect off;
-  proxy_pass http://apache-lms-backend;
-}
+    proxy_redirect off;
+    proxy_pass http://apache-lms-backend;
+   }
 
-```
+  ```
 
 这两部分代码实现nginx代理服务器的配置。upstream按照轮询（默认）方式进行负载，每个请求按时间顺序逐一分配到不同的后端服务器。
