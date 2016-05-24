@@ -28,12 +28,13 @@ this is a repo for FlowControl
 
          输入下面的命令，打开配置文件。
          
-  ``` 
+       ``` 
       cd /edx/app/nginx/sites-available/lms
       sudo vim lms
       ```
+      
 
-   （2）	更改配置文件，把uri 为http://crl.ptopenlab.com:8811/flow-control/  的页面转交给apache的8080端口。实现方法为在上述配置文件中加入下面的代码：
+  （2）	更改配置文件，把uri 为http://crl.ptopenlab.com:8811/flow-control/  的页面转交给apache的8080端口。实现方法为在上述配置文件中加入下面的代码：
  
  ```
  upstream apache-lms-backend {
@@ -51,17 +52,16 @@ proxy_set_header X-Forwarded-For $http_x_forwarded_for;
 location ~ ^/flow-control/?$ {
   try_files $uri @proxy_to_apache_lms;
 }
+
 ```
-              
 代码解释：
 
 ```
-
-#指定后端服务端的地址为127.0.0.1:8080。重试时间间隔为0
+指定后端服务端的地址为127.0.0.1:8080。重试时间间隔为0
 upstream apache-lms-backend {
   server 127.0.0.1:8080 fail_timeout=0;
 }
-#定义一个命名的（名称为proxy_to_apache_lms） location，在内部定向时使用。proxy_set_header 用于设置重定向的header
+定义一个命名的（名称为proxy_to_apache_lms） location，在内部定向时使用。proxy_set_header 用于设置重定向的header
 location @proxy_to_apache_lms {
   proxy_set_header X-Forwarded-Proto $http_x_forwarded_proto;
 proxy_set_header X-Forwarded-Port $http_x_forwarded_port;
