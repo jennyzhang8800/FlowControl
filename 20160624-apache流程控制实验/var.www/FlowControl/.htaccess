@@ -1,0 +1,4 @@
+AuthName "FlowControl"
+AuthType Basic
+AuthUserFile /var/www/FlowControl/.htpasswd
+require valid-user
