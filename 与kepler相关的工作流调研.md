@@ -13,3 +13,5 @@
 
 +  **商业工作流系统**：传统的工作流系统，即目前应用在企业领域的BPM（Business Process Management），例如JBPM和Activiti。
 +  **科学工作流系统**：是获取科学数据（包括传感器数据、医学影像、卫星图像、仿真输出、各类观测数据等等），并对所获取到的数据执行复杂分析的灵活的工具。如目前主流的科学工作流系统：Taverna,Kepler,VIEW,Swift,Pegasus
+![compare.png](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/workflow-engine.PNG)
+![compare.png](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/compare.PNG)
