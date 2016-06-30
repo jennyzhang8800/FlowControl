@@ -48,9 +48,9 @@
 
 ###3.3 总体架构和模块划分
 
-给定一个网络服务描述的URL，KEPLER系统中的WebService actor 就能被实例化为在服务描述中的任意特定操作。在实例化之后。WebService actor 将被整合进一个科学工作流中，就像一个本地构件一样。
+  给定一个网络服务描述的URL，KEPLER系统中的WebService actor 就能被实例化为在服务描述中的任意特定操作。在实例化之后。WebService actor 将被整合进一个科学工作流中，就像一个本地构件一样。
 
-Harvester 组件是KEPLER的众多网络服务之一。就像通用的WebService actor 一样。对于那些基于网络服务的应用和工作流来说，Harvester特性使得快速的原型设计和开发更加便利
+  Harvester 组件是KEPLER的众多网络服务之一。就像通用的WebService actor 一样。对于那些基于网络服务的应用和工作流来说，Harvester特性使得快速的原型设计和开发更加便利
 
  **相关术语**
 
@@ -59,20 +59,21 @@ Harvester 组件是KEPLER的众多网络服务之一。就像通用的WebService
 + 端口（port）：角色间供相互连接的通道，有输入端口和输出端口。
 + 连接（relation）：用于连接角色的端口，是数据传递的通道。
 
-在用Kepler/PtolemyII构建的科学工作流中，独立处理具体任务的组件实体被称为“actor”。
+  在用Kepler/PtolemyII构建的科学工作流中，独立处理具体任务的组件实体被称为“actor”。
 
-“actor”之间通信的接口是“port”，有input port和output port两种。
+  “actor”之间通信的接口是“port”，有input port和output port两种。
 
-actor使用“parameter”来配置和定制相关的行为。
+  actor使用“parameter”来配置和定制相关的行为。
 
-actor之间通过“channel”相互连接
+  actor之间通过“channel”相互连接
 
-“director”指定了模型执行的语义，定义了actor如何执行，以及相互之间如何通信。用户定制好的工作流模型，包括一个特定领域的“director”，以及至少一个“actor”。工作流执行的时候，“director”控制数据在“actor”中的流动，按照定制好的流程，调度部署每个“actor”的迭代执行。
+  “director”指定了模型执行的语义，定义了actor如何执行，以及相互之间如何通信。用户定制好的工作流模型，包括一个特定领域的“director”，以及至少一个“actor”。工作流执行的时候，“director”控制数据在“actor”中的流动，按照定制好的流程，调度部署每个“actor”的迭代执行。
 
-在Kepler/PtolemyII系统中，定制好的科学工作流模型以XML文件形式存储，该XML文件满足MoML（Modeling Markup Language）XML模式要求。
+  在Kepler/PtolemyII系统中，定制好的科学工作流模型以XML文件形式存储，该XML文件满足MoML（Modeling Markup Language）XML模式要求。
 MoML使用DTD（文档类型定义）定义
 
 **Kepler工作流**
+
 ![kepler-panel-1.PNG](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/kepler-panel-1.PNG)
 ![kepler-panel-2.PNG](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/Kepler-panel-2.PNG)
 
@@ -94,6 +95,15 @@ MoML使用DTD（文档类型定义）定义
 + 完成对物理资源及分布式资源（大规模科学数据，如IPCC、NCAR等）的存取。
 
 
+#4. 参考文献
+[科学工作流报告](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8A%A5%E5%91%8A.doc)
 
+[科学工作流kepler及其应用](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81kepler%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8.ppt)
+
+[基于科学工作流的铁路行车安全评价系统研究_杜彦华](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8E%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E9%93%81%E8%B7%AF%E8%A1%8C%E8%BD%A6%E5%AE%89%E5%85%A8%E8%AF%84%E4%BB%B7%E7%B3%BB%E7%BB%9F%E7%A0%94%E7%A9%B6_%E6%9D%9C%E5%BD%A6%E5%8D%8E.pdf)
+
+[基于Kepler工作流的OWS服务链应用_张建博](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8EKepler%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84OWS%E6%9C%8D%E5%8A%A1%E9%93%BE%E5%BA%94%E7%94%A8_%E5%BC%A0%E5%BB%BA%E5%8D%9A.pdf)
+
+[基于科学工作流的空间数据处理技术探讨_柴胜](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8E%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF%E6%8E%A2%E8%AE%A8_%E6%9F%B4%E8%83%9C.pdf)
 
 
