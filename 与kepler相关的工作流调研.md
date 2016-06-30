@@ -35,6 +35,8 @@
 
 **Kepler网址：**[https://kepler-project.org/](https://kepler-project.org/)
 
+----
+
 ###3.2 语言及特点
 **Kepler系统使用JAVA语言编写，充分利用了JAVA语言的面向对象特点，具有可移植性强等优点。**
 
@@ -45,6 +47,7 @@
 
 总之，Kepler软件能帮助用户分享、复用那些由科学社区开发的数据、工作流和构件，从而满足一般的公共需求。
 
+----
 
 ###3.3 总体架构和模块划分
 
@@ -59,7 +62,7 @@
 + 端口（port）：角色间供相互连接的通道，有输入端口和输出端口。
 + 连接（relation）：用于连接角色的端口，是数据传递的通道。
 
-  在用Kepler/PtolemyII构建的科学工作流中，独立处理具体任务的组件实体被称为“actor”。
+在用Kepler/PtolemyII构建的科学工作流中，独立处理具体任务的组件实体被称为“actor”。
 
   “actor”之间通信的接口是“port”，有input port和output port两种。
 
@@ -76,6 +79,8 @@ MoML使用DTD（文档类型定义）定义
 
 ![kepler-panel-1.PNG](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/kepler-panel-1.PNG)
 ![kepler-panel-2.PNG](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/Kepler-panel-2.PNG)
+
+----
 
 ###3.4 基于web的工作流（后台利用Kepler）
 **架构图**
@@ -94,16 +99,16 @@ MoML使用DTD（文档类型定义）定义
 **数据资源层**
 + 完成对物理资源及分布式资源（大规模科学数据，如IPCC、NCAR等）的存取。
 
-
+---
 #4. 参考文献
-[科学工作流报告](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8A%A5%E5%91%8A.doc)
+【1】[科学工作流报告](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8A%A5%E5%91%8A.doc)
 
-[科学工作流kepler及其应用](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81kepler%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8.ppt)
+【2】[科学工作流kepler及其应用](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81kepler%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8.ppt)
 
-[基于科学工作流的铁路行车安全评价系统研究_杜彦华](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8E%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E9%93%81%E8%B7%AF%E8%A1%8C%E8%BD%A6%E5%AE%89%E5%85%A8%E8%AF%84%E4%BB%B7%E7%B3%BB%E7%BB%9F%E7%A0%94%E7%A9%B6_%E6%9D%9C%E5%BD%A6%E5%8D%8E.pdf)
+【3】[基于科学工作流的铁路行车安全评价系统研究_杜彦华](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8E%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E9%93%81%E8%B7%AF%E8%A1%8C%E8%BD%A6%E5%AE%89%E5%85%A8%E8%AF%84%E4%BB%B7%E7%B3%BB%E7%BB%9F%E7%A0%94%E7%A9%B6_%E6%9D%9C%E5%BD%A6%E5%8D%8E.pdf)
 
-[基于Kepler工作流的OWS服务链应用_张建博](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8EKepler%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84OWS%E6%9C%8D%E5%8A%A1%E9%93%BE%E5%BA%94%E7%94%A8_%E5%BC%A0%E5%BB%BA%E5%8D%9A.pdf)
+【4】[基于Kepler工作流的OWS服务链应用_张建博](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8EKepler%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84OWS%E6%9C%8D%E5%8A%A1%E9%93%BE%E5%BA%94%E7%94%A8_%E5%BC%A0%E5%BB%BA%E5%8D%9A.pdf)
 
-[基于科学工作流的空间数据处理技术探讨_柴胜](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8E%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF%E6%8E%A2%E8%AE%A8_%E6%9F%B4%E8%83%9C.pdf)
+【5】[基于科学工作流的空间数据处理技术探讨_柴胜](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E5%9F%BA%E4%BA%8E%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF%E6%8E%A2%E8%AE%A8_%E6%9F%B4%E8%83%9C.pdf)
 
 
