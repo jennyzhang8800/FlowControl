@@ -16,8 +16,11 @@
 
 **开源工作流引擎**
 ![compare.png](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/workflow-engine.PNG)
+
 **特点**
 ![compare.png](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/workflow-table.PNG)
+
 有关这五种科学工作流更多详细信息，[点击查看](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8A%A5%E5%91%8A.doc)
+
 **两者对比**
 ![compare.png](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/compare.PNG)
