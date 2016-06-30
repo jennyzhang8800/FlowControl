@@ -1,10 +1,14 @@
-#1.工作流
+#与kepler相关的工作流调研
+
+---
+
+##1.工作流
 >**工作流概念起源**：工作流的概念起源于*办公自动化领域*。它所关注的问题是处理过程的自动化，它根据一系列定义的规则，把文档、信息或任务在参与者之间传递，以达到某种目的
 
 >**工作流定义**：工作流管理联盟（WfMC）对工作流的定义：一类能够完全或者部分*自动执行*的经营过程，根据一系列过程规则、文档、信息或任务能够在不同的执行者之间传递、执行。
 
 ---
-#2.工作流系统
+##2.工作流系统
 >**工作流系统定义**：工作流管理联盟(WfMC，Workflow Management Coalition)给出的关于工作流管理系统的定义是：工作流管理系统是一个软件系统，它完成工作流的定义和管理，并按照在计算机中预先定义好的工作流逻辑推进工作流实例的执行。
 
 ---
@@ -29,7 +33,7 @@
 ![compare.png](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/compare.PNG)
 
 ---
-#3.Kepler系统
+##3.Kepler系统
 ###3.1 简介
 >**Keplert系统**:由UC Berkeley大学开发的Ptolemy系统，用于研究并发、实时以及嵌入式系统的建模、仿真和设计。Kepler系统很好地继承和发展了Ptolemy面向角色建模的特性，并加入了大量新特性，用于支持科学工作流。主要体现在对科学数据的获取、处理。
 
@@ -100,7 +104,7 @@ MoML使用DTD（文档类型定义）定义
 + 完成对物理资源及分布式资源（大规模科学数据，如IPCC、NCAR等）的存取。
 
 ---
-#4. 参考文献
+##4. 参考文献
 【1】[科学工作流报告](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8A%A5%E5%91%8A.doc)
 
 【2】[科学工作流kepler及其应用](https://github.com/jennyzhang8800/FlowControl/blob/master/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81/%E7%A7%91%E5%AD%A6%E5%B7%A5%E4%BD%9C%E6%B5%81kepler%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8.ppt)
