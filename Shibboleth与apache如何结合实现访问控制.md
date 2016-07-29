@@ -17,6 +17,7 @@ Shibboleth系统由身份提供者（identity provider，IdP）、服务提供�
 +	DS
 
   DS主要负责IdP的发现，并在SP生成认证请求时，提供可以选择的IdP列表。它是一个可选择的组件。主要应用在多IdP的环境下。
+  
 ![shibboleth](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/Shibboleth%E6%A1%86%E6%9E%B6.jpg)
  
 1. 	用户访问被SP保护的资源
