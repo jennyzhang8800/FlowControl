@@ -32,29 +32,41 @@
 
 #### 演示
 
-**　与用户交互端（Browser）　**
+**与用户交互端（Browser）**
 
+```
 1. index.html页面中 ->填入注册信息 -> 确认
+```
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170428-kepler-%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92%E5%8F%8A%E8%B7%B3%E8%BD%AC%E6%B5%81%E7%A8%8B/pictures/index.html.png)
 
+```
 跳转到1.html页面
+```
 
+```
 2. "1.html"页面中 -> 填写答案 -> 提交
+```
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170428-kepler-%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92%E5%8F%8A%E8%B7%B3%E8%BD%AC%E6%B5%81%E7%A8%8B/pictures/1.html.png)
 
+```
 跳转到2.html页面
+```
 
+```
 3. "2.html"页面中 -> 填写答案 -> 提交
+```
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170428-kepler-%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92%E5%8F%8A%E8%B7%B3%E8%BD%AC%E6%B5%81%E7%A8%8B/pictures/2.html.png)
 
+```
 跳转到end.html页面
+```
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170428-kepler-%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92%E5%8F%8A%E8%B7%B3%E8%BD%AC%E6%B5%81%E7%A8%8B/pictures/end.html.png)
 
 
-** kepler 引擎端　**
+**kepler 引擎端**
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170428-kepler-%E9%A1%B5%E9%9D%A2%E4%BA%A4%E4%BA%92%E5%8F%8A%E8%B7%B3%E8%BD%AC%E6%B5%81%E7%A8%8B/pictures/kepler-rev.png)
