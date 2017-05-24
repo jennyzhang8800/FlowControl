@@ -17,7 +17,7 @@
 
 实质是通过调用/home/jenny/Kepler-2.5/test目录下的 queryMongo.py脚本实现查询功能，在Kepler中External Execution这个Actor可以实现外部脚本的执行
 
-![image](https://github.com/jennyzhang8800/FlowControl/tree/master/20170524-%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E6%9F%A5%E8%AF%A2MongoDB-%E5%B0%81%E8%A3%85%E6%88%90%E5%AD%90%E6%B5%81%E7%A8%8B/pictures/QueryMongoDB.PNG)
+![image](https://github.com/jennyzhang8800/FlowControl/blob/master/20170524-%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E6%9F%A5%E8%AF%A2MongoDB-%E5%B0%81%E8%A3%85%E6%88%90%E5%AD%90%E6%B5%81%E7%A8%8B/pictures/QueryMongoDB.PNG)
 
 3. **queryMongo.py**
  ```
