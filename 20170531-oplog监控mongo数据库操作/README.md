@@ -102,4 +102,26 @@ T3:
 
 
  
+ ### 4.附
  
+ 以master模式打开mongod之后，可以在local数据库下看到oplog.$main这个聚集。这里保存的就是操作日志.
+ 
+ 首先，以master启动mongod
+ 
+ ```
+ sudo mongod --master --dbpath /data/db
+ ```
+ 
+ 然后，打开一个新的terminal,查看oplog.$main这个聚集的内容
+ 
+ ```
+ mongo
+ use local
+ db.oplog.$main.find()
+ ```
+ 
+ 可以看到“1.1oplog的结构”这部分所示的日志信息
+
+![image](https://github.com/jennyzhang8800/FlowControl/blob/master/20170531-oplog%E7%9B%91%E6%8E%A7mongo%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/pictures/local.oplog.PNG)
+
+参考链接：http://www.tuicool.com/articles/NbMNJrJ
