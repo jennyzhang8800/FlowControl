@@ -45,20 +45,19 @@
   + ***输出***(output):一个输出端口，它在执行完命令后，广播由执行命令生成的数据，作为字符串输出。
   + ***退出码***(exitCode):一个输出端口，指示命令是否成功执行。如果命令成功执行，则退出码为1。
   + ***交互输出***(iterativeOutput):输出端口，用于广播每次迭代的输出。
-  
-![](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/Status%20Checker.PNG)
+  ![](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/Status%20Checker.PNG)
 
 ## 3.Stop
 
 + **功能简介** 
-
   + Stop actor在当前迭代完成后停止工作流。
-  + 该actor通过其输入端口接收布尔token。 当actor收到一个true token，它会停止工作流。当当前迭代完成时，取决于工作流Director。
-    + 在SDF Director下，当前的迭代结束，当Stop actor收到一个true token时停止执行。
-    + 在DE Derector下，actors可以在Stop调用之后调用（如果具有时间戳t和值true的事件到达Stop actor，然后结束当前迭代。意味着用时间戳T处理事件队列中的所有事件，其中一些事件可能在Stop actor调用之前还没有被处理过）
-    ＋Stop actor不是停止PN工作流的最好方法，它没有定义好的迭代概念。要停止一个PN工作流，设计工作流，在工作流停止时，所有参与者都缺少数据。Director会发现这种饥饿，并停止工作流程。注意：如果不确定性是可以接受的，则可以使用Stop actor。
+  + 该actor通过其输入端口接收布尔token。 当actor收到一个true token，它会停止工作流。当当前迭代完成时，取决于工作流Director
+  + 在SDF Director下，当前的迭代结束，当Stop actor收到一个true token时停止执行。
+  + 在DE Derector下，actors可以在Stop调用之后调用（如果具有时间戳t和值true的事件到达Stop actor，然后结束当前迭代。意味着用时间戳T处理事件队列中的所有事件，其中一些事件可能在Stop actor调用之前还没有被处理过）
+  + Stop actor不是停止PN工作流的最好方法，它没有定义好的迭代概念。要停止一个PN工作流，设计工作流，在工作流停止时，所有参与者都缺少数据。Director会发现这种饥饿，并停止工作流程。注意：如果不确定性是可以接受的，则可以使用Stop actor。
     
 + **端口**
-  + 输入(input):接受布尔tocken的多端口。当该端口接收到一个true token时，工作流就停止了。如果该端口未连接，则当actor触发时，actor请求暂停。
+  + 输入(input):接受布尔tocken的多端口。当该端口接收到一个true token时，工作流就停止了。如果该端口未连接，则当actor触发时，actor请求暂停。
+  ![](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/StopActor.PNG)
    
   
