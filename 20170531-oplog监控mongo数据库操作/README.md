@@ -112,14 +112,30 @@ T3:
  sudo mongod --master --dbpath /data/db
  ```
  
+ 
  然后，打开一个新的terminal,查看oplog.$main这个聚集的内容
  
  ```
  mongo
  use local
+ show collections
+
+ ```
+ 可以看到有oplog.$main这个collection
+ 
+ 注！如果没有看到oplog.$main，请先关闭mongod服务，再重新启动。
+ ```
+ use  admin  
+ db.shutdownServer()
+ 
+ ```
+
+ ```
+ sudo mongod --master --dbpath /data/db
+ mongo
+ use local
  db.oplog.$main.find()
  ```
- 
  可以看到“1.1oplog的结构”这部分所示的日志信息
 
 ![image](https://github.com/jennyzhang8800/FlowControl/blob/master/20170531-oplog%E7%9B%91%E6%8E%A7mongo%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/pictures/local.oplog.PNG)
