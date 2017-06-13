@@ -42,7 +42,7 @@ sudo mongod --master --dbpath /data/db
 ```
 mongo
 use test
-db.workflow.insert({"email":"test2@163.com"})
+db.workflow.insert({"email":"test1@163.com"})
 ```
 这时候可以看到T3有信息的输出，这条日志被记录在mongo-oplog.log中
 
