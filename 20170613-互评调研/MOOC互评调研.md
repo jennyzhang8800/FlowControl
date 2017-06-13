@@ -1,6 +1,6 @@
 MOOC互评模式调研
 
-### Cousera
+## 1. Cousera
 
 
 [Peer reviewed assignments](https://learner.coursera.help/hc/en-us/articles/208279946) are graded with the following formula:
@@ -29,11 +29,13 @@ You'll need to do the required number of peer reviews for other people's assignm
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/%E4%BD%9C%E4%B8%9A%E8%AF%84%E5%88%86%E6%B5%81%E7%A8%8B.png)
 
-### edx
+## 2. edx
+
+流程与cousera相同
 
 ![image](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/edx-cousera.png)
 
-### 中国大学MOOC
+## 3. 中国大学MOOC
 
 [示例课程](http://www.icourse163.org/learn/HUST-1001672006?tid=1002086003#/learn/testlist)
 
@@ -56,3 +58,18 @@ You'll need to do the required number of peer reviews for other people's assignm
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/peer-reviews.PNG)
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6MOOC_flow_chart.png)
+
+## 4.Moodle
+
+提交作业阶段->评价阶段->成绩核定阶段
+
+各个阶段的流转需要教师在后台操作
+
+教师设置互评：
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/moodle-%E6%95%99%E5%B8%88%E7%95%8C%E9%9D%A2.PNG)
+
+[示例课程](http://school.demo.moodle.net/mod/workshop/view.php?id=575)
+
+学生界面：
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/moodle.PNG)
