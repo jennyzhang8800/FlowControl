@@ -1,4 +1,4 @@
->Kepler 在设时的时间内，检测MongoDB的更改情况
+>Kepler 在设定的时间内，检测MongoDB的更改情况。
 
 ### 1. 启动Mongod服务
 
