@@ -53,3 +53,6 @@ You'll need to do the required number of peer reviews for other people's assignm
 
 3. 成绩：在互评截止日期后，你将看到同伴给你的评分以及反馈信息。(为了避免过高或过低的极端情况，系统将会在同伴所评定的分数中取中位数或者平均数，作为该份作业的最终得分。)
 
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/peer-reviews.PNG)
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6MOOC_flow_chart.png)
