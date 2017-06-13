@@ -21,9 +21,17 @@ You'll need to do the required number of peer reviews for other people's assignm
 
 5. 当互评成绩出来后，能够看到是由哪些同学批改的你的作业
 
+下图是用户的互评流程：
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/cousera_flow_chart.png)
+
+下图是互评作业的流转图：
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/%E4%BD%9C%E4%B8%9A%E8%AF%84%E5%88%86%E6%B5%81%E7%A8%8B.png)
+
 ### edx
 
-[image]()
+![image](https://github.com/jennyzhang8800/FlowControl/blob/master/20170613-%E4%BA%92%E8%AF%84%E8%B0%83%E7%A0%94/pictures/edx-cousera.png)
 
 ### 中国大学MOOC
 
