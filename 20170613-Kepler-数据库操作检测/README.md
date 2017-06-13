@@ -34,6 +34,8 @@ sudo mongod --master --dbpath /data/db
 
 ### 3. 启动Kepler工作流
 
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/CheckMongoChanges.PNG)
+
 ### 4. 对MongoDB作更改
 
 打开一个新的terminal（称为T4）
@@ -42,6 +44,9 @@ mongo
 use test
 db.workflow.insert({"email":"test2@163.com"})
 ```
-这时候可以看到T3有信息的输出，同时Kepler界面也有信息输出。
+这时候可以看到T3有信息的输出，这条日志被记录在mongo-oplog.log中
 
-而且，这条日志被记录在mongo-oplog.log中
+同时Kepler界面也有信息输出,如下图：
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/pictures/CheckMongoChangesResult.PNG)
+
