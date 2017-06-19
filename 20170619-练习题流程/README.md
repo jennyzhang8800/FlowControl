@@ -121,13 +121,19 @@ Mongo数据库中的对应的数据如下：
 >可以通过控制课程章节导航栏的显示，来实现章节的访问控制。
 如下图：第1讲不显示
 
-1. 分析控制脚本
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/navigation-panel.png)
 
-利用chrome的F12，先分析导航栏对应的html结构。如下：
+
+
+#### 1. 利用chrome的F12，先分析导航栏对应的html结构。
+
+如下：
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/edx-lms-navigation.png)
 
 可以看到导航栏定义在```<div class='acorrdion'>...</div>```之间，查看source,可以看到加载的js位于/static/js下。
 
-因此，根据关键词找到对应的源码：
+#### 2. 根据关键词找到对应的源码：
 
 ```
 cd /edx
@@ -148,7 +154,9 @@ sudo find -name accordion
 ```
 从html代码可以分析出，html模板接收的数据中应含有'toc'字段
 
-下面找到对应的python脚本(python脚本的render函数应该以accordion.html作为参数)。
+### 3. 下面找到对应的python脚本
+
+(python脚本的render函数应该以accordion.html作为参数)。
 
 通过下面的命令查找包含‘accordion.html’的所有文件
 ```
