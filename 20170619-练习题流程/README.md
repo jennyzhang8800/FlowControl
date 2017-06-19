@@ -1,6 +1,9 @@
 >Open edX 练习题流程
 
 ### 1. 流程定义
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B.png)
+
 ### 2. edx课程数据存储
 
  edx课程数据存储在Mongo数据库中。通过查看官方文档：[modulestores](http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/modulestores/index.html)得知，课程结构数据存储在modulestroe集合中。
