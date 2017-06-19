@@ -148,27 +148,34 @@ sudo find -name accordion
 ```
 从html代码可以分析出，html模板接收的数据中应含有'toc'字段
 
-下面找到对应的view.py脚本。** /edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views.py **
+下面找到对应的python脚本(python脚本的render函数应该以accordion.html作为参数)。
+
+通过下面的命令查找包含‘accordion.html’的所有文件
+```
+sudo find /edx/app/edxapp/edx-platform/lms|xargs grep -ri "accordion.html" -l
+```
+结果找到了下面的路径
+** /edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views/index.py**
 
 可以看到render_accordion这个函数：
 ```
-def render_accordion(user, request, course, chapter, section, field_data_cache):
+def render_accordion(request, course, table_of_contents):
     """
-    Draws navigation bar. Takes current position in accordion as
-    parameter.
-    If chapter and section are '' or None, renders a default accordion.
-    course, chapter, and section are the url_names.
-    Returns the html string
+    Returns the HTML that renders the navigation for the given course.
+    Expects the table_of_contents to have data on each chapter and section,
+    including which ones are active.
     """
-    # grab the table of contents
-    toc = toc_for_course(user, request, course, chapter, section, field_data_cache)
-    context = dict([
-        ('toc', toc),
-        ('course_id', course.id.to_deprecated_string()),
-        ('csrf', csrf(request)['csrf_token']),
-        ('due_date_display_format', course.due_date_display_format)
-    ] + template_imports.items())
+    context = dict(
+        [
+            ('toc', table_of_contents),
+            ('course_id', unicode(course.id)),
+            ('csrf', csrf(request)['csrf_token']),
+            ('due_date_display_format', course.due_date_display_format),
+        ] + TEMPLATE_IMPORTS.items()
+    )
     return render_to_string('courseware/accordion.html', context)
+
+
 
 ```
 
@@ -177,5 +184,5 @@ def render_accordion(user, request, course, chapter, section, field_data_cache):
 在github仓库对应的源码：
 [edxapp/edx-platform/lms/templates/courseware/accordion.html ](https://github.com/edx/edx-platform/blob/master/lms/templates/courseware/accordion.html)
 
-[/edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views.py](https://github.com/edx/edx-platform/blob/master/lms/djangoapps/courseware/views/views.py)
+[/edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views/index.py](https://github.com/edx/edx-platform/blob/master/lms/djangoapps/courseware/views/index.py)
 
