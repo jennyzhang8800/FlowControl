@@ -114,7 +114,9 @@ Mongo数据库中的对应的数据如下：
 "display_name" : "第2讲 实验零 操作系统实验环境准备"
 ```
 
-### 3.控制课程导航栏
+
+
+## 3.控制课程导航栏
 
 >可以通过控制课程章节导航栏的显示，来实现章节的访问控制。
 如下图：第1讲不显示
@@ -131,7 +133,10 @@ Mongo数据库中的对应的数据如下：
 cd /edx
 sudo find -name accordion
 ```
-可以找到** /edx/app/edxapp/edx-platform/lms/templates/courseware/accordion.html **
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/edx-accordion.html.png)
+
+可以找到** /edx/app/edxapp/edx-platform/lms/templates/courseware/accordion.html **  
 
 这里定义了导航栏的html模板：
 ```
@@ -168,3 +173,9 @@ def render_accordion(user, request, course, chapter, section, field_data_cache):
 ```
 
 因此通过控制context的内容，就可以控制前台导航栏的显示了！
+
+在github仓库对应的源码：
+[edxapp/edx-platform/lms/templates/courseware/accordion.html ](https://github.com/edx/edx-platform/blob/master/lms/templates/courseware/accordion.html)
+
+[/edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views.py](https://github.com/edx/edx-platform/blob/master/lms/djangoapps/courseware/views/views.py)
+
