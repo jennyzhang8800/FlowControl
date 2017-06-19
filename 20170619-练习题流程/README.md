@@ -4,7 +4,8 @@
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B.png)
 
-### 2. edx课程数据存储
+
+### 2. edx课程结构-数据存储
 
  edx课程数据存储在Mongo数据库中。通过查看官方文档：[modulestores](http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/modulestores/index.html)得知，课程结构数据存储在modulestroe集合中。
  
@@ -112,3 +113,58 @@ Mongo数据库中的对应的数据如下：
 ```
 "display_name" : "第2讲 实验零 操作系统实验环境准备"
 ```
+
+### 3.控制课程导航栏
+
+>可以通过控制课程章节导航栏的显示，来实现章节的访问控制。
+如下图：第1讲不显示
+
+1. 分析控制脚本
+
+利用chrome的F12，先分析导航栏对应的html结构。如下：
+
+可以看到导航栏定义在```<div class='acorrdion'>...</div>```之间，查看source,可以看到加载的js位于/static/js下。
+
+因此，根据关键词找到对应的源码：
+
+```
+cd /edx
+sudo find -name accordion
+```
+可以找到** /edx/app/edxapp/edx-platform/lms/templates/courseware/accordion.html **
+
+这里定义了导航栏的html模板：
+```
+.....
+.....
+% for chapter in toc:
+    ${make_chapter(chapter)}
+% endfor
+```
+从html代码可以分析出，html模板接收的数据中应含有'toc'字段
+
+下面找到对应的view.py脚本。** /edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views.py **
+
+可以看到render_accordion这个函数：
+```
+def render_accordion(user, request, course, chapter, section, field_data_cache):
+    """
+    Draws navigation bar. Takes current position in accordion as
+    parameter.
+    If chapter and section are '' or None, renders a default accordion.
+    course, chapter, and section are the url_names.
+    Returns the html string
+    """
+    # grab the table of contents
+    toc = toc_for_course(user, request, course, chapter, section, field_data_cache)
+    context = dict([
+        ('toc', toc),
+        ('course_id', course.id.to_deprecated_string()),
+        ('csrf', csrf(request)['csrf_token']),
+        ('due_date_display_format', course.due_date_display_format)
+    ] + template_imports.items())
+    return render_to_string('courseware/accordion.html', context)
+
+```
+
+因此通过控制context的内容，就可以控制前台导航栏的显示了！
