@@ -1,0 +1,1011 @@
+[
+    {
+        'display_id': u'0',
+        'sections': [
+            {
+                'url_name': u'7be9a21ca62e4f5d8325d27b66a0c9bf',
+                'display_name': u'Docker',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'400f7c812c254b799e66194d24b297ae',
+                'display_name': u'\u4ee3\u7801\u6d4f\u89c8',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'5355e890fdbd457fa7bf7822257d681b',
+                'display_name': u'\u4ee3\u7801\u7f16\u8f91',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'896b56b6156047869eecd8b519852558',
+                'display_name': u'piazza\u95ee\u7b54\u670d\u52a1',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'b699f1f07ad249889f6f3a0a34e9bdbb',
+                'display_name': u'\u7ec3\u4e60',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'8891ccda525942a19f7897d849a21606',
+                'display_name': u'\u7b80\u7b54\u9898\u8bc4\u5206',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': True
+            },
+            {
+                'url_name': u'fa72699c288f40c7b7342369889c2042',
+                'display_name': u'\u9898\u5e93\u7f16\u8f91',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'31997002ffe3402388b8c9acaf4267d0',
+                'display_name': u'\u7ec3\u4e60\u9898\u5b8c\u6210\u60c5\u51b5\u7edf\u8ba1',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'c67bbf5223c442829e301983ecae59f9',
+                'display_name': u'\u7edf\u8ba1\u6d4f\u89c8\u5668',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'65a2e6de0e7f4ec8a261df82683a2fc3',
+        'display_name': u'\u7b2c0\u8bb2\u5728\u7ebf\u6559\u5b66\u73af\u5883\u51c6\u5907',
+        'active': True
+    },
+    {
+        'display_id': u'1',
+        'sections': [
+            {
+                'url_name': u'46edb1f9de1b42198d9eb556f282f474',
+                'display_name': u'1.2\u6559\u5b66\u5b89\u6392',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'28e59ffc5dc6491ebd92a3c93fa6b297',
+                'display_name': u'\u7ec3\u4e60',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'85bebd4eb98b44ff998049da61c8e040',
+        'display_name': u'\u7b2c1\u8bb2\u6982\u8ff0',
+        'active': False
+    },
+    {
+        'display_id': u'2',
+        'sections': [
+            {
+                'url_name': u'9eea7983a1644804bfe4b662efd6d16d',
+                'display_name': u'2.1\u524d\u8a00\u548c\u56fd\u5185\u5916\u73b0\u72b6',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'85142d7343bb4f1fb0a588e59f51c902',
+                'display_name': u'2.2OS\u5b9e\u9a8c\u76ee\u6807',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'b4d247c196134cdbac9dd4e37465dcbe',
+                'display_name': u'2.38\u4e2aOS\u5b9e\u9a8c\u6982\u8ff0',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'7e545a6c25714f44a52e0205cfd71033',
+                'display_name': u'2.4\u5b9e\u9a8c\u73af\u5883\u642d\u5efa',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'19304745c4694ee1958fc9c111ba7e0d',
+                'display_name': u'2.5x86-32\u786c\u4ef6\u4ecb\u7ecd',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'be1c2ac233174d798fc827d46d37f809',
+                'display_name': u'2.6ucore\u90e8\u5206\u7f16\u7a0b\u6280\u5de7',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'23cfd14026424006b3bb884e03d692fa',
+                'display_name': u'2.7\u6f14\u793a\u5b9e\u9a8c\u64cd\u4f5c\u8fc7\u7a0b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'95a97b1222504f0d8663d45f271692e4',
+        'display_name': u'\u7b2c2\u8bb2\u5b9e\u9a8c\u96f6\u64cd\u4f5c\u7cfb\u7edf\u5b9e\u9a8c\u73af\u5883\u51c6\u5907',
+        'active': False
+    },
+    {
+        'display_id': u'3',
+        'sections': [
+            {
+                'url_name': u'732225ff576e422ea8c3217680bab8d8',
+                'display_name': u'3.3\u4e2d\u65ad\u3001\u5f02\u5e38\u548c\u7cfb\u7edf\u8c03\u7528\u6bd4\u8f83',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'adc24a89f9f24fbda9a6e3e5b95adcbb',
+                'display_name': u'3.4\u7cfb\u7edf\u8c03\u7528',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'69aa56370c04474cb7638a87d0386316',
+        'display_name': u'\u7b2c3\u8bb2\u7cfb\u7edf\u542f\u52a8\u3001\u4e2d\u65ad\u3001\u5f02\u5e38\u548c\u7cfb\u7edf\u8c03\u7528',
+        'active': False
+    },
+    {
+        'display_id': u'4-bootloaderucore-os',
+        'sections': [
+            {
+                'url_name': u'146a389c15a646eaa879fd8e74b54c96',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'9fef5f36997942edab64944a33fd4ac2',
+        'display_name': u'\u7b2c4\u8bb2\u5b9e\u9a8c\u4e00bootloader\u542f\u52a8ucoreos',
+        'active': False
+    },
+    {
+        'display_id': u'5',
+        'sections': [
+            {
+                'url_name': u'9751dcdebdb4453daab6ae33d3a3e2d1',
+                'display_name': u'5.6\u7ec3\u4e60',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'28dcda07ef7844f99ca2c3d05a3750e3',
+        'display_name': u'\u7b2c5\u8bb2\u7269\u7406\u5185\u5b58\u7ba1\u7406: \u8fde\u7eed\u5185\u5b58\u5206\u914d',
+        'active': False
+    },
+    {
+        'display_id': u'6',
+        'sections': [
+            {
+                'url_name': u'be45c4aad107431dbc1cc2c7b2d8cd0c',
+                'display_name': u'6.8\u7ec3\u4e60',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'46bee5c8e3d847a481af07f08e0d5800',
+        'display_name': u'\u7b2c6\u8bb2\u7269\u7406\u5185\u5b58\u7ba1\u7406: \u975e\u8fde\u7eed\u5185\u5b58\u5206\u914d',
+        'active': False
+    },
+    {
+        'display_id': u'7',
+        'sections': [
+            {
+                'url_name': u'ee467f74b4af44f1b0f1201f34421aec',
+                'display_name': u'7.1\u4e86\u89e3x86\u4fdd\u62a4\u6a21\u5f0f\u4e2d\u7684\u7279\u6743\u7ea7',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'462be4c959bf48fca68d653d5182ab65',
+                'display_name': u'7.2\u4e86\u89e3\u7279\u6743\u7ea7\u5207\u6362\u8fc7\u7a0b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'a8db658717b140c09d58373b73ff8d99',
+                'display_name': u'7.3\u4e86\u89e3\u6bb5/\u9875\u8868',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'339799fb27984a5d8b7257687ceb3698',
+                'display_name': u'7.4\u4e86\u89e3UCORE\u5efa\u7acb\u6bb5/\u9875\u8868',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'9624da2927d54eb4892d4130991d2e0e',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'eff593d0c39e4608b8610238afe135de',
+        'display_name': u'\u7b2c7\u8bb2\u5b9e\u9a8c\u4e8c\u7269\u7406\u5185\u5b58\u7ba1\u7406',
+        'active': False
+    },
+    {
+        'display_id': u'8',
+        'sections': [
+            
+        ],
+        'url_name': u'd6cfefb083d04a508331118783e069dd',
+        'display_name': u'\u7b2c8\u8bb2\u865a\u62df\u5b58\u50a8\u6982\u5ff5',
+        'active': False
+    },
+    {
+        'display_id': u'9',
+        'sections': [
+            {
+                'url_name': u'e25870f6788245a18d1c9d4af014568c',
+                'display_name': u'9.2\u6700\u4f18\u7b97\u6cd5\u3001\u5148\u8fdb\u5148\u51fa\u7b97\u6cd5\u548c\u6700\u8fd1\u6700\u4e45\u672a\u4f7f\u7528\u7b97\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'65fd13eb6aa04bf5969df2bf7383cd3a',
+                'display_name': u'9.3\u65f6\u949f\u7f6e\u6362\u7b97\u6cd5\u548c\u6700\u4e0d\u5e38\u7528\u7b97\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'e09fceaedc64434eaac0124723970d44',
+                'display_name': u'9.4Belady\u73b0\u8c61\u548c\u5c40\u90e8\u7f6e\u6362\u7b97\u6cd5\u6bd4\u8f83',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'b69b714befcc40048bc03abc728287f1',
+                'display_name': u'9.5\u5de5\u4f5c\u96c6\u7f6e\u6362\u7b97\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'2bfa6fca083645619377e35082307688',
+                'display_name': u'9.6\u7f3a\u9875\u7387\u7f6e\u6362\u7b97\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'1404eaa5494a48049e7c60a41bc097c8',
+        'display_name': u'\u7b2c9\u8bb2\u9875\u9762\u7f6e\u6362\u7b97\u6cd5',
+        'active': False
+    },
+    {
+        'display_id': u'10',
+        'sections': [
+            {
+                'url_name': u'3ab843647610413c88dc97b891f4b523',
+                'display_name': u'10.1\u5b9e\u9a8c\u76ee\u6807\uff1a\u865a\u5b58\u7ba1\u7406',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'318a717757444fc0a9e5387472806270',
+                'display_name': u'10.2\u56de\u987e\u5386\u53f2\u548c\u4e86\u89e3\u5f53\u4e0b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'8046b0dbf1164977b102d672b24a1846',
+                'display_name': u'10.3\u5904\u7406\u6d41\u7a0b\u3001\u5173\u952e\u6570\u636e\u7ed3\u6784\u548c\u529f\u80fd',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'603e634312bf478baf8cf5b36c17adf8',
+                'display_name': u'10.4\u9875\u8bbf\u95ee\u5f02\u5e38',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'22ca5be097f244909af48bc8b77b2796',
+                'display_name': u'10.5\u9875\u6362\u5165\u6362\u51fa\u673a\u5236',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'fa044aeecfcf45afacb0d47f392a025b',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'c36bfded4a434c52bb44e932d9ed2ff9',
+        'display_name': u'\u7b2c10\u8bb2\u5b9e\u9a8c\u4e09\u865a\u62df\u5185\u5b58\u7ba1\u7406',
+        'active': False
+    },
+    {
+        'display_id': u'11',
+        'sections': [
+            {
+                'url_name': u'c7e132a3d34d4fbda6d9895d51e8fce7',
+                'display_name': u'11.1\u8fdb\u7a0b\u7684\u6982\u5ff5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'538305ec3e7d4b38b1bfbac8027caf23',
+                'display_name': u'11.2\u8fdb\u7a0b\u63a7\u5236\u5757',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'9c343e8366bd454bb2c5ae6e729afd50',
+                'display_name': u'11.3\u8fdb\u7a0b\u72b6\u6001',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'6d7a08ec1a9f4bc1ab0bcd07097f64cf',
+                'display_name': u'11.5\u6302\u8d77\u8fdb\u7a0b\u6a21\u578b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'89211965fb2e4bbcb5093a77510c83d7',
+                'display_name': u'11.6\u7ebf\u7a0b\u7684\u6982\u5ff5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'8047babe13b3428c85591b49318bca9c',
+                'display_name': u'11.7\u7528\u6237\u7ebf\u7a0b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'16c4ff1aec00470a92d873816b964529',
+                'display_name': u'11.8\u5185\u6838\u7ebf\u7a0b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'd30dd953be1c4fc296a0e142efe34783',
+        'display_name': u'\u7b2c11\u8bb2\u8fdb\u7a0b\u4e0e\u7ebf\u7a0b',
+        'active': False
+    },
+    {
+        'display_id': u'12',
+        'sections': [
+            {
+                'url_name': u'cfeec880de8141b19108bd5398879fbd',
+                'display_name': u'12.1\u8fdb\u7a0b\u5207\u6362',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'9dd182ed089c4731bf3db9882250df7f',
+                'display_name': u'12.2\u8fdb\u7a0b\u521b\u5efa',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'e3a120ba40314a7a983415848289a886',
+                'display_name': u'12.3\u8fdb\u7a0b\u52a0\u8f7d',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'9cee5dc53916492b8f033942259e7089',
+                'display_name': u'12.4\u8fdb\u7a0b\u7b49\u5f85\u4e0e\u9000\u51fa',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'b428f71faee14d929b86c349f12f9ce4',
+        'display_name': u'\u7b2c12\u8bb2\u8fdb\u7a0b\u63a7\u5236',
+        'active': False
+    },
+    {
+        'display_id': u'',
+        'sections': [
+            {
+                'url_name': u'149fbd78eb34410096d7cf1236a61a32',
+                'display_name': u'\u4e00\u3001\u5224\u65ad\u9898\uff0810\u5c0f\u9898\uff09',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'fc6b6aac1f3b48079e2db19b8d654bd9',
+                'display_name': u'\u4e8c\u3001\u586b\u7a7a\u9898\uff084\u5c0f\u9898\uff09',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'5067320a47924439a4b9a9be8137a639',
+                'display_name': u'\u4e09\u3001\u95ee\u7b54\u9898\uff085\u5927\u9898\uff0c\u517110\u5c0f\u9898\uff09',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'5e89a0a149a241e19e69b4919c43c15f',
+        'display_name': u'\u671f\u4e2d\u8003\u8bd5',
+        'active': False
+    },
+    {
+        'display_id': u'13',
+        'sections': [
+            {
+                'url_name': u'148f94d83f7c42058b77a802a0cfe866',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'7170ec3882b54fffa731a24e92c1d8aa',
+        'display_name': u'\u7b2c13\u8bb2\u5b9e\u9a8c\u56db\u5185\u6838\u7ebf\u7a0b\u7ba1\u7406',
+        'active': False
+    },
+    {
+        'display_id': u'14',
+        'sections': [
+            {
+                'url_name': u'098f82e49cd143c8925a77122dcd7a89',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'b84463f5323a49338d3708c98d912386',
+        'display_name': u'\u7b2c14\u8bb2\u5b9e\u9a8c\u4e94\u7528\u6237\u8fdb\u7a0b\u7ba1\u7406',
+        'active': False
+    },
+    {
+        'display_id': u'15',
+        'sections': [
+            {
+                'url_name': u'58e5f3a749bc41d8a301ada041b0aecc',
+                'display_name': u'15.1\u5904\u7406\u673a\u8c03\u5ea6\u6982\u5ff5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'd1e34ec245b048989a9141db710aca07',
+                'display_name': u'15.3\u5148\u6765\u5148\u670d\u52a1\u3001\u77ed\u8fdb\u7a0b\u4f18\u5148\u548c\u6700\u9ad8\u54cd\u5e94\u6bd4\u4f18\u5148\u8c03\u5ea6\u7b97\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'7683d66a8ca245b69405b6631fc0e3c3',
+                'display_name': u'15.4\u65f6\u95f4\u7247\u8f6e\u8f6c\u3001\u591a\u7ea7\u53cd\u9988\u961f\u5217\u3001\u516c\u5e73\u5171\u4eab\u8c03\u5ea6\u7b97\u6cd5\u548cucore\u8c03\u5ea6\u6846\u67b6',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'4c9b4ae2bac4416c803b6b6e63971491',
+                'display_name': u'15.5\u5b9e\u65f6\u8c03\u5ea6\u548c\u591a\u5904\u7406\u5668\u8c03\u5ea6',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'a1ae03cf11094e46a3e08028330169e2',
+                'display_name': u'15.6\u4f18\u5148\u7ea7\u53cd\u7f6e',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'c89a56dea8b2496184fc9b6bd2b48348',
+        'display_name': u'\u7b2c15\u8bb2\u5904\u7406\u673a\u8c03\u5ea6',
+        'active': False
+    },
+    {
+        'display_id': u'16',
+        'sections': [
+            {
+                'url_name': u'22a4e79d58b54a48976675f8cbc2914f',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'0b28a187c17c4a668086c1b33d28e0a2',
+        'display_name': u'\u7b2c16\u8bb2\u5b9e\u9a8c\u516d\u8c03\u5ea6\u5668',
+        'active': False
+    },
+    {
+        'display_id': u'17',
+        'sections': [
+            {
+                'url_name': u'4cc6af16359e4ff5b51d37ec7fe4e5b6',
+                'display_name': u'17.2\u73b0\u5b9e\u751f\u6d3b\u4e2d\u7684\u540c\u6b65\u95ee\u9898',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'841a28f7c540496b9c0d2f4c08003906',
+                'display_name': u'17.3\u4e34\u754c\u533a\u548c\u7981\u7528\u786c\u4ef6\u4e2d\u65ad\u540c\u6b65\u65b9\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'8dc3a335cdbe41c282732db184aad3e7',
+                'display_name': u'17.4\u57fa\u4e8e\u8f6f\u4ef6\u7684\u540c\u6b65\u65b9\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'8c580007b506447d8188baa343f9f4c2',
+                'display_name': u'17.5\u9ad8\u7ea7\u62bd\u8c61\u7684\u540c\u6b65\u65b9\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'fa23938665be446f97fec8bd53a73063',
+        'display_name': u'\u7b2c17\u8bb2\u540c\u6b65\u4e92\u65a5',
+        'active': False
+    },
+    {
+        'display_id': u'18',
+        'sections': [
+            {
+                'url_name': u'28f5a3d61f8c4f16a747e3300c519e15',
+                'display_name': u'18.1\u4fe1\u53f7\u91cf',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'2e68bf4281f0437eb10523df29999201',
+                'display_name': u'18.2\u4fe1\u53f7\u91cf\u4f7f\u7528',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'a06aaa1d8daf47a3940cd0ab8a408425',
+                'display_name': u'18.3\u7ba1\u7a0b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'657ce8b46d1f41f5a01cf742a0132095',
+        'display_name': u'\u7b2c18\u8bb2\u4fe1\u53f7\u91cf\u548c\u7ba1\u7a0b',
+        'active': False
+    },
+    {
+        'display_id': u'19',
+        'sections': [
+            {
+                'url_name': u'b84f4fa10eb748fba1355f3cb17b9f46',
+                'display_name': u'19.2\u5e95\u5c42\u652f\u6491',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'99089409c4be4343b24e68c41c629cee',
+                'display_name': u'19.3\u4fe1\u53f7\u91cf\u8bbe\u8ba1\u5b9e\u73b0',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'fec270b0a7174540ae0e3dff6deb46f9',
+                'display_name': u'19.4\u7ba1\u7a0b\u548c\u6761\u4ef6\u53d8\u91cf\u8bbe\u8ba1\u5b9e\u73b0',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'b413dbc641a44cc7a994cd5b7d280abe',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'3b61271a07b240f293e5d1430e69910e',
+        'display_name': u'\u7b2c19\u8bb2\u5b9e\u9a8c\u4e03\u540c\u6b65\u4e92\u65a5',
+        'active': False
+    },
+    {
+        'display_id': u'20',
+        'sections': [
+            {
+                'url_name': u'7e75dd7bf5f944c984d6ffdf512143ab',
+                'display_name': u'20.1\u6b7b\u9501\u6982\u5ff5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'bdbc49f5665840ad901e53390faa00ab',
+                'display_name': u'20.2\u6b7b\u9501\u5904\u7406\u65b9\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'2468fa0cab1b46a08f99bad784fde999',
+                'display_name': u'20.3\u94f6\u884c\u5bb6\u7b97\u6cd5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'99d16e00a5294b2588b66c9833871347',
+                'display_name': u'20.4\u6b7b\u9501\u68c0\u6d4b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'cbf12d77dac047639529edca2e1d23a5',
+                'display_name': u'20.5\u8fdb\u7a0b\u901a\u4fe1\u6982\u5ff5',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'053f7728d63d4ec08666bbdf66e75598',
+                'display_name': u'20.6\u4fe1\u53f7\u548c\u7ba1\u9053',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'0b62b64a19cb43fc80b857099cd6c5bb',
+                'display_name': u'20.7\u6d88\u606f\u961f\u5217\u548c\u5171\u4eab\u5185\u5b58',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'0ee1726196904c5783fc9ae734871034',
+        'display_name': u'\u7b2c20\u8bb2\u6b7b\u9501\u548c\u8fdb\u7a0b\u901a\u4fe1',
+        'active': False
+    },
+    {
+        'display_id': u'21',
+        'sections': [
+            {
+                'url_name': u'058ca6bcbcae4536a331f672882b949d',
+                'display_name': u'21.1\u6587\u4ef6\u7cfb\u7edf\u548c\u6587\u4ef6',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'3761de812a254ba28e9bd428554d564a',
+                'display_name': u'21.2\u6587\u4ef6\u63cf\u8ff0\u7b26',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'aa9d7b02bafe4eec93b1b3341f792a6f',
+                'display_name': u'21.3\u76ee\u5f55\u3001\u6587\u4ef6\u522b\u540d\u548c\u6587\u4ef6\u7cfb',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'75251aa79595413b852cba11f11ccb2c',
+                'display_name': u'21.4\u865a\u62df\u6587\u4ef6\u7cfb\u7edf',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'b092bd5b481b4a2fb45894b8a5eec629',
+                'display_name': u'21.5\u6587\u4ef6\u7f13\u5b58\u548c\u6253\u5f00\u6587\u4ef6',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'd8a6b679cf3d46fea1b6dad952a1bf92',
+                'display_name': u'21.6\u6587\u4ef6\u5206\u914d',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'a4e4827104a248089b57c3fc419493e6',
+                'display_name': u'21.7\u7a7a\u95f2\u7a7a\u95f4\u7ba1\u7406\u548c\u5197\u4f59\u78c1\u76d8\u9635\u5217RAID',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'2f529cd6566b4c319fc2a02f4e192a38',
+        'display_name': u'\u7b2c21\u8bb2\u6587\u4ef6\u7cfb\u7edf',
+        'active': False
+    },
+    {
+        'display_id': u'22-sfs',
+        'sections': [
+            {
+                'url_name': u'd32eef84f0fe4e61a8a0b7f606325962',
+                'display_name': u'22.1\u603b\u4f53\u4ecb\u7ecd',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'7f8267fe86ec45fab28c022c1c0e8ef0',
+                'display_name': u'22.2ucore\u6587\u4ef6\u7cfb\u7edf\u67b6\u6784',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'13c649f0c4894ccba5c58b4fe5fd18f6',
+                'display_name': u'22.3SimpleFileSystem\u5206\u6790',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'09f22305734b49c68f682955c00fa432',
+                'display_name': u'22.4VirtualFileSystem\u5206\u6790',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'fc5aaaaff76e42698b2d5c7b7acdd4b5',
+                'display_name': u'22.5I/O\u8bbe\u5907\u63a5\u53e3\u5206\u6790',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'098e21c8e086475cb4d5d3b1ec030d27',
+                'display_name': u'\u5b9e\u9a8c\u62a5\u544a\u63d0\u4ea4',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'b3dbc84ee4e94b439e1aada0fc08b351',
+        'display_name': u'\u7b2c22\u8bb2\u5b9e\u9a8c\u516bSFS\u6587\u4ef6\u7cfb\u7edf',
+        'active': False
+    },
+    {
+        'display_id': u'23-io',
+        'sections': [
+            {
+                'url_name': u'd9a7845753854d648bc820b654d39e29',
+                'display_name': u'23.1I/O\u7279\u70b9',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'926b4a0390984233913f52fbbeabe56e',
+                'display_name': u'23.2I/O\u7ed3\u6784',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'0c984c2c5a684b6c93870d7905b6c3a0',
+                'display_name': u'23.3I/O\u6570\u636e\u4f20\u8f93',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'2508690a73524cd7a6a2b878a3e88f67',
+                'display_name': u'23.4\u78c1\u76d8\u8c03\u5ea6',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'db5b7a7d2938471e922ddc22e735e159',
+                'display_name': u'23.5\u78c1\u76d8\u7f13\u5b58',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'62fc886648434803a4d73c3336a446d3',
+        'display_name': u'\u7b2c23\u8bb2I/O\u5b50\u7cfb\u7edf',
+        'active': False
+    },
+    {
+        'display_id': u'',
+        'sections': [
+            {
+                'url_name': u'c1dec2c346ab471aabef78f33f7a3918',
+                'display_name': u'\u5224\u65ad\u9898(\u517120\u5c0f\u9898)',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'83cdedd0b87a4ea6b79a6c534b63c95c',
+                'display_name': u'\u586b\u7a7a\u9898(\u51714\u5c0f\u9898)',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'5d04f87bfddc4557abd1b94ad943fd61',
+                'display_name': u'\u95ee\u7b54\u9898(\u51715\u5c0f\u9898)',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'f18e1c141c5f44e782f277d7d7f38073',
+        'display_name': u'\u671f\u672b\u8003\u8bd5',
+        'active': False
+    }
+]
