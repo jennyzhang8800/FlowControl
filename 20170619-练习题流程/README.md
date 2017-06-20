@@ -154,6 +154,87 @@ sudo find -name accordion
 ```
 从html代码可以分析出，html模板接收的数据中应含有'toc'字段
 
+html模板接收的数据格式如下：
+
+```
+  context = dict(
+        [
+            ('toc', table_of_contents),
+            ('course_id', unicode(course.id)),
+            ('csrf', csrf(request)['csrf_token']),
+            ('due_date_display_format', course.due_date_display_format),
+        ] + TEMPLATE_IMPORTS.items()
+    )
+```
+
+toc:格式如下（仍然以第二讲为例）
+```
+  {
+        'display_id': u'2',
+        'sections': [
+            {
+                'url_name': u'9eea7983a1644804bfe4b662efd6d16d',
+                'display_name': u'2.1\u524d\u8a00\u548c\u56fd\u5185\u5916\u73b0\u72b6',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'85142d7343bb4f1fb0a588e59f51c902',
+                'display_name': u'2.2OS\u5b9e\u9a8c\u76ee\u6807',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'b4d247c196134cdbac9dd4e37465dcbe',
+                'display_name': u'2.38\u4e2aOS\u5b9e\u9a8c\u6982\u8ff0',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'7e545a6c25714f44a52e0205cfd71033',
+                'display_name': u'2.4\u5b9e\u9a8c\u73af\u5883\u642d\u5efa',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'19304745c4694ee1958fc9c111ba7e0d',
+                'display_name': u'2.5x86-32\u786c\u4ef6\u4ecb\u7ecd',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'be1c2ac233174d798fc827d46d37f809',
+                'display_name': u'2.6ucore\u90e8\u5206\u7f16\u7a0b\u6280\u5de7',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            },
+            {
+                'url_name': u'23cfd14026424006b3bb884e03d692fa',
+                'display_name': u'2.7\u6f14\u793a\u5b9e\u9a8c\u64cd\u4f5c\u8fc7\u7a0b',
+                'graded': False,
+                'format': '',
+                'due': None,
+                'active': False
+            }
+        ],
+        'url_name': u'95a97b1222504f0d8663d45f271692e4',
+        'display_name': u'\u7b2c2\u8bb2\u5b9e\u9a8c\u96f6\u64cd\u4f5c\u7cfb\u7edf\u5b9e\u9a8c\u73af\u5883\u51c6\u5907',
+        'active': False
+    },
+```
+
 ### 3. 下面找到对应的python脚本
 
 (python脚本的render函数应该以accordion.html作为参数)。
