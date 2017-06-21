@@ -429,6 +429,6 @@ visible:false: 表示该章节可见
 }
 ```
 
-对应的LMS页面显示效果为:
+对应的LMS页面显示效果为:(第1讲己经由不可见改为可见)
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/edx_lms_accordion2.PNG)
