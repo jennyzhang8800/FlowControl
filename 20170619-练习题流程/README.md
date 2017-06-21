@@ -275,3 +275,79 @@ def render_accordion(request, course, table_of_contents):
 
 [/edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views/index.py](https://github.com/edx/edx-platform/blob/master/lms/djangoapps/courseware/views/index.py)
 
+
+
+### 4. 修改index.py
+
+1. 打开index.py
+
+```
+sudo vim /edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views/index.py
+```
+2. 在index.py引入pymongo模块
+
+```
+import pymongo
+```
+
+3. 找到下的代码:
+
+```
+ courseware_context['accordion'] = render_accordion(
+ self.request,
+ self.course,
+ table_of_contents['chapters'],
+ courseware_context['language_preference'],
+
+ )
+```
+
+改为:
+
+```
+courseware_context['accordion'] = render_accordion(
+ self.request,
+ self.course,
+ table_of_contents['chapters'],
+ courseware_context['language_preference'],
+ self.real_user.email,
+ )
+
+```
+4. 修改render_accordion
+
+```
+def render_accordion(request, course, table_of_contents, language_preference,email):
+    """
+    Returns the HTML that renders the navigation for the given course.
+    Expects the table_of_contents to have data on each chapter and section,
+    including which ones are active.
+    """
+
+ conn = pymongo.Connection('localhost', 27017)
+    db = conn.test
+    db.authenticate("edxapp","p@ssw0rd")
+    result = db.workflow.find_one({'email':email}) #connect to collection
+    if result:
+         for item in result['workflow']:
+             if item['visible'] == False:
+ for index,item2 in enumerate(table_of_contents):
+ if(item2['url_name'] == item['url_name']):
+    #                    table_of_contents[index]['sections']=[]
+ del table_of_contents[index]
+
+ conn.disconnect()
+    context = dict(
+ [
+ ('toc', table_of_contents),
+ ('course_id', unicode(course.id)),
+ ('csrf', csrf(request)['csrf_token']),
+ ('due_date_display_format', course.due_date_display_format),
+ ('time_zone', request.user.preferences.model.get_value(request.user, "time_zone", None)),
+ ('language', language_preference),
+
+ ] + TEMPLATE_IMPORTS.items()
+ )
+ return render_to_string('courseware/accordion.html', context)
+
+```
