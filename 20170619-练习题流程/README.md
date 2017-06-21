@@ -2,7 +2,7 @@
 
 ### 1. 流程定义
 
-![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B.png)
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B2.png)
 
 
 ### 2. edx课程结构-数据存储
