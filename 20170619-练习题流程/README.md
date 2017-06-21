@@ -315,6 +315,7 @@ courseware_context['accordion'] = render_accordion(
 
 ```
 4. 修改render_accordion
+改为:
 
 ```
 def render_accordion(request, course, table_of_contents, language_preference,email):
@@ -323,31 +324,35 @@ def render_accordion(request, course, table_of_contents, language_preference,ema
     Expects the table_of_contents to have data on each chapter and section,
     including which ones are active.
     """
-
- conn = pymongo.Connection('localhost', 27017)
+    
+    conn = pymongo.Connection('localhost', 27017)
     db = conn.test
     db.authenticate("edxapp","p@ssw0rd")
     result = db.workflow.find_one({'email':email}) #connect to collection
     if result:
-         for item in result['workflow']:
-             if item['visible'] == False:
- for index,item2 in enumerate(table_of_contents):
- if(item2['url_name'] == item['url_name']):
+        for item in result['workflow']:
+            if item['visible'] == False:
+                for index,item2 in enumerate(table_of_contents):
+                    if(item2['url_name'] == item['url_name']):
     #                    table_of_contents[index]['sections']=[]
- del table_of_contents[index]
+                        del table_of_contents[index]
 
- conn.disconnect()
+    conn.disconnect()
     context = dict(
- [
- ('toc', table_of_contents),
- ('course_id', unicode(course.id)),
- ('csrf', csrf(request)['csrf_token']),
- ('due_date_display_format', course.due_date_display_format),
- ('time_zone', request.user.preferences.model.get_value(request.user, "time_zone", None)),
- ('language', language_preference),
+        [
+            ('toc', table_of_contents),
+            ('course_id', unicode(course.id)),
+            ('csrf', csrf(request)['csrf_token']),
+            ('due_date_display_format', course.due_date_display_format),
+            ('time_zone', request.user.preferences.model.get_value(request.user, "time_zone", None)),
+            ('language', language_preference),
 
- ] + TEMPLATE_IMPORTS.items()
- )
- return render_to_string('courseware/accordion.html', context)
+        ] + TEMPLATE_IMPORTS.items()
+    )
+    return render_to_string('courseware/accordion.html', context)
 
 ```
+
+修改前的[index.py](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/index.py.packup)
+
+修改后的[index.py](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/index.py)
