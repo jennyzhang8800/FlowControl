@@ -1,0 +1,27 @@
+ db.workflow.insert({"email": "jennyzhang8800@163.com", "workflow": [{"visible": true, "url_name": "65a2e6de0e7f4ec8a261df82683a2fc3", "display_
+name": "\u7b2c0\u8bb2\u5728\u7ebf\u6559\u5b66\u73af\u5883\u51c6\u5907"}, {"visible": false, "url_name": "85bebd4eb98b44ff998049da61c8e040", "disp
+lay_name": "\u7b2c1\u8bb2\u6982\u8ff0"}, {"visible": false, "url_name": "95a97b1222504f0d8663d45f271692e4", "display_name": "\u7b2c2\u8bb2\u5b9e\
+u9a8c\u96f6\u64cd\u4f5c\u7cfb\u7edf\u5b9e\u9a8c\u73af\u5883\u51c6\u5907"}, {"visible": false, "url_name": "69aa56370c04474cb7638a87d0386316", "di
+splay_name": "\u7b2c3\u8bb2\u7cfb\u7edf\u542f\u52a8\u3001\u4e2d\u65ad\u3001\u5f02\u5e38\u548c\u7cfb\u7edf\u8c03\u7528"}, {"visible": false, "url_
+name": "9fef5f36997942edab64944a33fd4ac2", "display_name": "\u7b2c4\u8bb2\u5b9e\u9a8c\u4e00bootloader\u542f\u52a8ucoreos"}, {"visible": false, "u
+rl_name": "28dcda07ef7844f99ca2c3d05a3750e3", "display_name": "\u7b2c5\u8bb2\u7269\u7406\u5185\u5b58\u7ba1\u7406: \u8fde\u7eed\u5185\u5b58\u5206\
+u914d"}, {"visible": false, "url_name": "46bee5c8e3d847a481af07f08e0d5800", "display_name": "\u7b2c6\u8bb2\u7269\u7406\u5185\u5b58\u7ba1\u7406: \
+u975e\u8fde\u7eed\u5185\u5b58\u5206\u914d"}, {"visible": false, "url_name": "eff593d0c39e4608b8610238afe135de", "display_name": "\u7b2c7\u8bb2\u5
+b9e\u9a8c\u4e8c\u7269\u7406\u5185\u5b58\u7ba1\u7406"}, {"visible": false, "url_name": "d6cfefb083d04a508331118783e069dd", "display_name": "\u7b2c
+8\u8bb2\u865a\u62df\u5b58\u50a8\u6982\u5ff5"}, {"visible": false, "url_name": "1404eaa5494a48049e7c60a41bc097c8", "display_name": "\u7b2c9\u8bb2\
+u9875\u9762\u7f6e\u6362\u7b97\u6cd5"}, {"visible": false, "url_name": "c36bfded4a434c52bb44e932d9ed2ff9", "display_name": "\u7b2c10\u8bb2\u5b9e\u
+9a8c\u4e09\u865a\u62df\u5185\u5b58\u7ba1\u7406"}, {"visible": false, "url_name": "d30dd953be1c4fc296a0e142efe34783", "display_name": "\u7b2c11\u8
+bb2\u8fdb\u7a0b\u4e0e\u7ebf\u7a0b"}, {"visible": false, "url_name": "b428f71faee14d929b86c349f12f9ce4", "display_name": "\u7b2c12\u8bb2\u8fdb\u7a
+0b\u63a7\u5236"}, {"visible": false, "url_name": "5e89a0a149a241e19e69b4919c43c15f", "display_name": "\u671f\u4e2d\u8003\u8bd5"}, {"visible": fal
+se, "url_name": "7170ec3882b54fffa731a24e92c1d8aa", "display_name": "\u7b2c13\u8bb2\u5b9e\u9a8c\u56db\u5185\u6838\u7ebf\u7a0b\u7ba1\u7406"}, {"vi
+sible": false, "url_name": "b84463f5323a49338d3708c98d912386", "display_name": "\u7b2c14\u8bb2\u5b9e\u9a8c\u4e94\u7528\u6237\u8fdb\u7a0b\u7ba1\u7
+406"}, {"visible": false, "url_name": "c89a56dea8b2496184fc9b6bd2b48348", "display_name": "\u7b2c15\u8bb2\u5904\u7406\u673a\u8c03\u5ea6"}, {"visi
+ble": false, "url_name": "0b28a187c17c4a668086c1b33d28e0a2", "display_name": "\u7b2c16\u8bb2\u5b9e\u9a8c\u516d\u8c03\u5ea6\u5668"}, {"visible": f
+alse, "url_name": "fa23938665be446f97fec8bd53a73063", "display_name": "\u7b2c17\u8bb2\u540c\u6b65\u4e92\u65a5"}, {"visible": false, "url_name": "
+657ce8b46d1f41f5a01cf742a0132095", "display_name": "\u7b2c18\u8bb2\u4fe1\u53f7\u91cf\u548c\u7ba1\u7a0b"}, {"visible": false, "url_name": "3b61271
+a07b240f293e5d1430e69910e", "display_name": "\u7b2c19\u8bb2\u5b9e\u9a8c\u4e03\u540c\u6b65\u4e92\u65a5"}, {"visible": false, "url_name": "0ee17261
+96904c5783fc9ae734871034", "display_name": "\u7b2c20\u8bb2\u6b7b\u9501\u548c\u8fdb\u7a0b\u901a\u4fe1"}, {"visible": false, "url_name": "2f529cd65
+66b4c319fc2a02f4e192a38", "display_name": "\u7b2c21\u8bb2\u6587\u4ef6\u7cfb\u7edf"}, {"visible": false, "url_name": "b3dbc84ee4e94b439e1aada0fc08
+b351", "display_name": "\u7b2c22\u8bb2\u5b9e\u9a8c\u516bSFS\u6587\u4ef6\u7cfb\u7edf"}, {"visible": false, "url_name": "62fc886648434803a4d73c3336
+a446d3", "display_name": "\u7b2c23\u8bb2I/O\u5b50\u7cfb\u7edf"}, {"visible": false, "url_name": "f18e1c141c5f44e782f277d7d7f38073", "display_name
+": "\u671f\u672b\u8003\u8bd5"}]})

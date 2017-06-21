@@ -1,0 +1,136 @@
+{
+"_id" : ObjectId("5949d9d432ad300def59063f"),
+"email" : "os_course_911_2@163.com",
+"workflow" : [
+{
+"visible" : true,
+"url_name" : "65a2e6de0e7f4ec8a261df82683a2fc3",
+"display_name" : "第0讲在线教学环境准备"
+},
+{
+"visible" : false,
+"url_name" : "85bebd4eb98b44ff998049da61c8e040",
+"display_name" : "第1讲概述"
+},
+{
+"visible" : false,
+"url_name" : "95a97b1222504f0d8663d45f271692e4",
+"display_name" : "第2讲实验零操作系统实验环境准备"
+},
+{
+"visible" : false,
+"url_name" : "69aa56370c04474cb7638a87d0386316",
+"display_name" : "第3讲系统启动、中断、异常和系统调用"
+},
+{
+"visible" : false,
+"url_name" : "9fef5f36997942edab64944a33fd4ac2",
+"display_name" : "第4讲实验一bootloader启动ucoreos"
+},
+{
+"visible" : false,
+"url_name" : "28dcda07ef7844f99ca2c3d05a3750e3",
+"display_name" : "第5讲物理内存管理: 连续内存分配"
+},
+{
+"visible" : false,
+"url_name" : "46bee5c8e3d847a481af07f08e0d5800",
+"display_name" : "第6讲物理内存管理: 非连续内存分配"
+},
+{
+"visible" : false,
+"url_name" : "eff593d0c39e4608b8610238afe135de",
+"display_name" : "第7讲实验二物理内存管理"
+},
+{
+"visible" : false,
+"url_name" : "d6cfefb083d04a508331118783e069dd",
+"display_name" : "第8讲虚拟存储概念"
+},
+{
+"visible" : false,
+"url_name" : "1404eaa5494a48049e7c60a41bc097c8",
+"display_name" : "第9讲页面置换算法"
+},
+{
+"visible" : false,
+"url_name" : "c36bfded4a434c52bb44e932d9ed2ff9",
+"display_name" : "第10讲实验三虚拟内存管理"
+},
+{
+"visible" : false,
+"url_name" : "d30dd953be1c4fc296a0e142efe34783",
+"display_name" : "第11讲进程与线程"
+},
+{
+"visible" : false,
+"url_name" : "b428f71faee14d929b86c349f12f9ce4",
+"display_name" : "第12讲进程控制"
+},
+{
+"visible" : false,
+"url_name" : "5e89a0a149a241e19e69b4919c43c15f",
+"display_name" : "期中考试"
+},
+{
+"visible" : false,
+"url_name" : "7170ec3882b54fffa731a24e92c1d8aa",
+"display_name" : "第13讲实验四内核线程管理"
+},
+{
+"visible" : false,
+"url_name" : "b84463f5323a49338d3708c98d912386",
+"display_name" : "第14讲实验五用户进程管理"
+},
+{
+"visible" : false,
+"url_name" : "c89a56dea8b2496184fc9b6bd2b48348",
+"display_name" : "第15讲处理机调度"
+},
+{
+"visible" : false,
+"url_name" : "0b28a187c17c4a668086c1b33d28e0a2",
+"display_name" : "第16讲实验六调度器"
+},
+{
+"visible" : false,
+"url_name" : "fa23938665be446f97fec8bd53a73063",
+"display_name" : "第17讲同步互斥"
+},
+{
+"visible" : false,
+"url_name" : "657ce8b46d1f41f5a01cf742a0132095",
+"display_name" : "第18讲信号量和管程"
+},
+{
+"visible" : false,
+"url_name" : "3b61271a07b240f293e5d1430e69910e",
+"display_name" : "第19讲实验七同步互斥"
+},
+{
+"visible" : false,
+"url_name" : "0ee1726196904c5783fc9ae734871034",
+"display_name" : "第20讲死锁和进程通信"
+},
+{
+"visible" : false,
+"url_name" : "2f529cd6566b4c319fc2a02f4e192a38",
+"display_name" : "第21讲文件系统"
+},
+{
+"visible" : false,
+"url_name" : "b3dbc84ee4e94b439e1aada0fc08b351",
+"display_name" : "第22讲实验八SFS文件系统"
+},
+{
+"visible" : false,
+"url_name" : "62fc886648434803a4d73c3336a446d3",
+"display_name" : "第23讲I/O子系统"
+},
+{
+"visible" : false,
+"url_name" : "f18e1c141c5f44e782f277d7d7f38073",
+"display_name" : "期末考试"
+}
+]
+}
