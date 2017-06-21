@@ -279,18 +279,20 @@ def render_accordion(request, course, table_of_contents):
 
 ### 4. 修改index.py
 
-1. 打开index.py
+index.py中的render_accordion函数控制edx LMS课程页面的导航栏显示.
+
+**1. 打开index.py**
 
 ```
 sudo vim /edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views/index.py
 ```
-2. 在index.py引入pymongo模块
+**2. 在index.py引入pymongo模块**
 
 ```
 import pymongo
 ```
 
-3. 找到下的代码:
+**3. 找到下的代码:**
 
 ```
  courseware_context['accordion'] = render_accordion(
@@ -314,7 +316,8 @@ courseware_context['accordion'] = render_accordion(
  )
 
 ```
-4. 修改render_accordion
+**4. 修改render_accordion**
+
 改为:
 
 ```
@@ -356,3 +359,68 @@ def render_accordion(request, course, table_of_contents, language_preference,ema
 修改前的[index.py](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/index.py.packup)
 
 修改后的[index.py](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/index.py)
+
+
+### 5. Mongo状态信息库
+
+在MongoDB中维护一个学习流程的状态信息库.
+
+每一个用户有一个学习流程状态表,根据该表,决定LMS页面的学习内容展示.
+
+状态表为:"test"数据库下的"workflow"集合.
+
+每一个用户是"workflow"集合中的一个文档.
+
+文档的形式为:
+
+visible:true :表示该章节不可见
+
+visible:false: 表示该章节可见
+
+```
+{
+"_id" : ObjectId("5949d9d432ad300def59063f"),
+"email" : "os_course_911_2@163.com",
+"workflow" : [
+                {
+                "visible" : true,
+                "url_name" : "65a2e6de0e7f4ec8a261df82683a2fc3",
+                "display_name" : "第0讲在线教学环境准备"
+                },
+                {
+                "visible" : false,
+                "url_name" : "85bebd4eb98b44ff998049da61c8e040",
+                "display_name" : "第1讲概述"
+                },
+                ....
+                ....
+              ]
+}
+```
+
+如果更新某个用户的状态表,则LMS页面显示也会更新:
+
+```
+ db.workflow.update({"email":"os_course_911_2@163.com"},{"$set":{"workflow.1.visible":true}})
+```
+
+```
+{
+"_id" : ObjectId("5949d9d432ad300def59063f"),
+"email" : "os_course_911_2@163.com",
+"workflow" : [
+                {
+                "visible" : true,
+                "url_name" : "65a2e6de0e7f4ec8a261df82683a2fc3",
+                "display_name" : "第0讲在线教学环境准备"
+                },
+                {
+                "visible" : true,
+                "url_name" : "85bebd4eb98b44ff998049da61c8e040",
+                "display_name" : "第1讲概述"
+                },
+                ....
+                ....
+              ]
+}
+```
