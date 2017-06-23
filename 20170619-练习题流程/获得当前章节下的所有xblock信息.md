@@ -6,6 +6,7 @@
 
 具体的官方文档为[get-a-list-of-course-blocks-in-a-block-tree](https://edx.readthedocs.io/projects/edx-platform-api/en/latest/courses/blocks.html#get-a-list-of-course-blocks-in-a-block-tree)
 
+API格式如下：
 ```
 GET /api/courses/v1/blocks/<usage_id>/?
     username=anjali
@@ -16,7 +17,28 @@ GET /api/courses/v1/blocks/<usage_id>/?
     &block_types_filter=problem,html
 ```
 
-关于如何获得usage_id? [点击查看官方文档](https://edx.readthedocs.io/projects/edx-partner-course-staff/en/latest/course_features/lti/lti_address_content.html#finding-the-usage-id-for-course-content)
+1.1 关于如何获得usage_id? 
+
+[点击查看官方文档](https://edx.readthedocs.io/projects/edx-partner-course-staff/en/latest/course_features/lti/lti_address_content.html#finding-the-usage-id-for-course-content)
+
+（1）以“教员”身份进入到LMS
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/usage_id0.png)
+
+(2) 点击xblock下方的"工作人员调试信息"
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/usage_id1.png)
+
+(3)location的值即为当前xblock的usage_id
+
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/usage_id2.png)
+
+
+另外：
+```
+parent=i4x://Tsinghua/CS101/vertical/22f775172cfb4ee7ad37ba7f5ce38562
+为当前xblock的父节点（即unit）的usage_id
+```
 
 usage_id的格式如下：
 
@@ -44,6 +66,28 @@ i4x://Tsinghua/CS101/chapter/95a97b1222504f0d8663d45f271692e4
 | 节 | subsection | sequential |
 | 单元 | unit | vertical |
 | 组件 | component | quizzes,html,video等 |
+
+
+可以看到unit 和component的usage_id可以通过以教员身份从LMS端“工作人员调试信息”中查看到，
+
+但是subsection和chapter的usage_id就无法直接从LMS查看到了。
+
+实际上，subsection和chapter的usage_id可以通过后台python程序中直接获得。
+
+例如，xblock名称为“workflow”，则可以从workflow.py中调用self.get_parent()获取当前xblock的父节点
+
+| 名称 | 名称 | {type} |python获取usage_id| usage_id |
+|:---: | :---:| :---:|:---:|:---:|
+| 章 | chapter | chapter |   self.get_parent().get_parent().get_parent()location  | i4x://Tsinghua/CS101/chapter/95a97b1222504f0d8663d45f271692e4 |
+| 节 | subsection | sequential | self.get_parent().get_parent().location | i4x://Tsinghua/CS101/sequential/23cfd14026424006b3bb884e03d692fa |
+| 单元 | unit | vertical | self.get_parent().location | i4x://Tsinghua/CS101/vertical/5d1f4847605d453fbbdd9ee8c29704f7 |
+| 组件 | component | quizzes,html,video等 | self.location | i4x://Tsinghua/CS101/workflow/af94846445f34c34976700e1d8f0ab39 |
+
+
+至此己经能够获得当前xblock，以及其多级父节点的usage_id
+
+接下来就可以直接利用API，获得指定usage_id下的所有xblock
+
 
 **例1:获得'第二章'(chapter)下所有的'练习'xblock**
 
@@ -106,64 +150,3 @@ http://cherry.cs.tsinghua.edu.cn/api/courses/v1/blocks/i4x://Tsinghua/CS101/vert
 ```
 
 
-
-另:
-
-**例1:获得Tsinghua/CS101课程下所有的'练习'xblock**
-
-API为:
-```
-GET /api/courses/v1/blocks/?course_id=<course_id>
-GET /api/courses/v1/blocks/?course_id=<course_id>
-    &username=anjali
-    &depth=all
-    &requested_fields=graded,format,student_view_multi_device,lti_url
-    &block_counts=video
-    &student_view_data=video
-    &block_types_filter=problem,html
-```
-
-具体的官方文档为：[get-a-list-of-course-blocks-in-a-course](https://edx.readthedocs.io/projects/edx-platform-api/en/latest/courses/blocks.html#get-a-list-of-course-blocks-in-a-course)
-
-下面是一个实例:
-```
-http://cherry.cs.tsinghua.edu.cn/api/courses/v1/blocks/?course_id=Tsinghua/CS101/2015_T1&all_blocks=true&depth=all&block_types_filter=quizzes2
-```
-上面的链接中:
-```
-api/courses/v1/blocks  : API
-course_id=Tsinghua/CS101/2015_T1  :课程ID为Tsinghua/CS101/2015_T1
-all_blocks=true  : 返回所有的block
-depth=all  :（整数或全部）表示遍历块的深度。all意味着整个层次结构。
-block_types_filter=quizzes2 : 用于筛选返回xblock的最终结果的块类型,这里只返回type:quizzes的xblock
-
-```
-
-返回的结果为：
-
-```
-HTTP 200 OK
-Content-Type: application/json
-Vary: Accept
-Allow: GET, HEAD, OPTIONS
-
-{
-    "root": "i4x://Tsinghua/CS101/course/2015_T1",
-    "blocks": {
-        "i4x://Tsinghua/CS101/quizzes2/884c3d0dd1934c8fa06d66720ef6aa26": {
-            "display_name": "练习",
-            "lms_web_url": "http://cherry.cs.tsinghua.edu.cn/courses/Tsinghua/CS101/2015_T1/jump_to/i4x://Tsinghua/CS101/quizzes2/884c3d0dd1934c8fa06d66720ef6aa26",
-            "type": "quizzes2",
-            "id": "i4x://Tsinghua/CS101/quizzes2/884c3d0dd1934c8fa06d66720ef6aa26",
-            "student_view_url": "http://cherry.cs.tsinghua.edu.cn/xblock/i4x://Tsinghua/CS101/quizzes2/884c3d0dd1934c8fa06d66720ef6aa26"
-        },
-        "i4x://Tsinghua/CS101/quizzes2/5e79bc9be44a461f846725edeab9c85f": {
-            "display_name": "练习",
-            "lms_web_url": "http://cherry.cs.tsinghua.edu.cn/courses/Tsinghua/CS101/2015_T1/jump_to/i4x://Tsinghua/CS101/quizzes2/5e79bc9be44a461f846725edeab9c85f",
-            "type": "quizzes2",
-            "id": "i4x://Tsinghua/CS101/quizzes2/5e79bc9be44a461f846725edeab9c85f",
-            "student_view_url": "http://cherry.cs.tsinghua.edu.cn/xblock/i4x://Tsinghua/CS101/quizzes2/5e79bc9be44a461f846725edeab9c85f"
-        },
-        ...
-        
-```
