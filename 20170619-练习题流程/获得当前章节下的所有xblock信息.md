@@ -1,6 +1,8 @@
 > 下面是获得xblock所在章节（chapter）下的所xblock列表的方法
 
-## 1. 从API获取
+有两种方法可以获得XBLOCK的信息，分别是从API获取和从XBLOCK类获取
+
+# 1. 从API获取
 
 可以通过[Courses API](https://edx.readthedocs.io/projects/edx-platform-api/en/latest/courses/)获取
 
@@ -161,7 +163,7 @@ class WorkflowXBlock(XBlock):
     
 ```
 
-上述WokflowXBlock类中，可以定义若干个方法，每个方法都必段以self作为第一个参数。
+上述WokflowXBlock类中，可以定义若干个方法，每个方法都必须self作为第一个参数。
 
 self代表的是当前XBLOCK对象，该对象拥有一些属性和方法。可以通过dir(self)查看该对象有哪些属性和方法[dir(self)]()
 
@@ -171,7 +173,8 @@ self代表的是当前XBLOCK对象，该对象拥有一些属性和方法。可�
 
 所以
 ```
-self.get_parent()                            即为unit（单元）节点
+self                                         即为当前xblock节点
+self.get_parent()                            即为unit（单元）节点
 self.get_parent().get_parent()               即为subsection(节)节点
 self.get_parent().get_parent().get_parent()  即为chapter(章)节点
 ```
@@ -191,7 +194,7 @@ self.get_parent().get_parent().get_parent()  即为chapter(章)节点
 获得当前XBLOCK所在章的所有练习题的题号：
 
 ```
- children = self.get_parent().get_parent().get_parent()get_children()
+ children = self.get_parent().get_parent().get_parent().get_children()
  qNo_list=[]
  for item in children:
      if hasattr(item, "qNo"):
