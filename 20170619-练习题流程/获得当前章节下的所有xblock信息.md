@@ -194,9 +194,11 @@ self.get_parent().get_parent().get_parent()  即为chapter(章)节点
 获得当前XBLOCK所在章的所有练习题的题号：
 
 ```
- children = self.get_parent().get_parent().get_parent().get_children()
- qNo_list=[]
- for item in children:
-     if hasattr(item, "qNo"):
-         qNo_list.append(item.qNo)
+subsections = self.get_parent().get_parent().get_parent().get_children()
+qNo_list=[]
+for subsection in subsections:
+    for unit in subsection.get_children():
+        for xblock in unit.get_children():
+            if hasattr(xblock, "qNo"):
+                qNo_list.append(xblock.qNo)
 ```
