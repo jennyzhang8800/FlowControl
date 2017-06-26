@@ -150,3 +150,50 @@ http://cherry.cs.tsinghua.edu.cn/api/courses/v1/blocks/i4x://Tsinghua/CS101/vert
 ```
 
 
+# 2.从XBLOCK类获取
+
+任何一个XBLOCK类的定义都按下面的模板定义：
+
+```
+class WorkflowXBlock(XBlock):
+    @XBlock.json_handler
+    def submmit(self, data, suffix=''):
+    
+```
+
+上述WokflowXBlock类中，可以定义若干个方法，每个方法都必段以self作为第一个参数。
+
+self代表的是当前XBLOCK对象，该对象拥有一些属性和方法。可以通过dir(self)查看该对象有哪些属性和方法[dir(self)]()
+
+可以找到有``get_parent``和``get_children``方法，可以获得该xblock的父结点，以及所有子节点。
+
+父子关系为：chapter -> subsection ->unit ->xblock
+
+所以
+```
+self.get_parent()                            即为unit（单元）节点
+self.get_parent().get_parent()               即为subsection(节)节点
+self.get_parent().get_parent().get_parent()  即为chapter(章)节点
+```
+
+因此：通过下面的代码可以获得当前XBLOCK所在unit的所有子节点
+```
+ children = self.get_parent().get_children()
+```
+更进一步，获得当前XBLOCK所在单元的所有练习题的题号：
+```
+ children = self.get_parent().get_children()
+ qNo_list=[]
+ for item in children:
+     if hasattr(item, "qNo"):
+         qNo_list.append(item.qNo)
+```
+获得当前XBLOCK所在章的所有练习题的题号：
+
+```
+ children = self.get_parent().get_parent().get_parent()get_children()
+ qNo_list=[]
+ for item in children:
+     if hasattr(item, "qNo"):
+         qNo_list.append(item.qNo)
+```
