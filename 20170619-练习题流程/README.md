@@ -432,3 +432,106 @@ visible:false: 表示该章节可见
 对应的LMS页面显示效果为:(第1讲己经由不可见改为可见)
 
 ![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/edx_lms_accordion2.PNG)
+
+### 课程状态信息库
+
+**流程图**
+![](https://github.com/jennyzhang8800/FlowControl/blob/master/20170619-%E7%BB%83%E4%B9%A0%E9%A2%98%E6%B5%81%E7%A8%8B/pictures/%E8%AF%BE%E7%A8%8B%E7%8A%B6%E6%80%81%E4%BF%A1%E6%81%AF%E5%BA%93.png)
+
+LMS页面的显示由课程状态信息库控制（只针对非教员用户）。
++ LMS页面加载时，会首先判断用户角色，如果是非教员用户，则会去查询课程状态信息库。
++ 连接MongoDB，查询状态信息库
+
+   （1） 如果该己经存在状态文档，则用最新的课程结构更新己有的状态文档
+   
+   （2） 如果该用户不存在状态文档，则创建新的状态文档
+  
++ 根据状态文档控制LMS页面的显示
+
+**代码**
+
+具体更改的代码为（更改``/edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views/index.py``）：
+
+**3. 找到下的代码:**
+
+```
+ courseware_context['accordion'] = render_accordion(
+ self.request,
+ self.course,
+ table_of_contents['chapters'],
+ courseware_context['language_preference'],
+
+ )
+```
+
+改为:
+
+```
+  courseware_context['accordion'] = render_accordion(
+            self.request,
+            self.course,
+            table_of_contents['chapters'],
+            courseware_context['language_preference'],
+            self.real_user.email,
+            self.is_staff,
+        )
+
+```
+**4. 修改render_accordion**
+
+改为:
+
+```
+def render_accordion(request, course, table_of_contents, language_preference,email, is_staff):
+    """
+    Returns the HTML that renders the navigation for the given course.
+    Expects the table_of_contents to have data on each chapter and section,
+    including which ones are active.
+    """
+    #add by zyni start
+    #gen current status contents document according to table_of_contents
+    if not is_staff:
+        cur_status_contents={'email':email,'workflow':[]} 
+        for index,subsection in enumerate(table_of_contents):
+            cur_sub = {'url_name':subsection['url_name'],'display_name':subsection['display_name'],'visible':False}
+            if index==0:
+                cur_sub['visible']=True
+            cur_status_contents['workflow'].append(cur_sub)
+        #connect to MongoDB
+        conn = pymongo.Connection('localhost', 27017)
+        db = conn.test
+        db.authenticate("edxapp","p@ssw0rd")
+        result = db.workflow.find_one({'email':email}) #connect to collection
+        if result:
+            #update MongoDB status contents document
+            for index_n,item_n in enumerate(cur_status_contents['workflow']):
+                for index_o,item_o in enumerate(result['workflow']):
+                    if item_o['url_name'] == item_n['url_name']:
+                        cur_status_contents['workflow'][index_n]['visible']=result['workflow'][index_o]['visible']
+            db.workflow.update({"email":email},{"$set":{"workflow":cur_status_contents['workflow']}})
+           # log.info('ne_status_contents=%s\n',cur_status_contents)
+        else:
+            db.workflow.insert(cur_status_contents)
+            log.info('email=%s,create new_status_contents on db.workflow',email)
+        for item in cur_status_contents['workflow']:
+            if item['visible'] == False:
+                for index,item2 in enumerate(table_of_contents):
+                    if(item2['url_name'] == item['url_name']):
+                        del table_of_contents[index]
+
+        conn.disconnect()
+    #add by zyni end
+    context = dict(
+        [
+            ('toc', table_of_contents),
+            ('course_id', unicode(course.id)),
+            ('csrf', csrf(request)['csrf_token']),
+            ('due_date_display_format', course.due_date_display_format),
+            ('time_zone', request.user.preferences.model.get_value(request.user, "time_zone", None)),
+            ('language', language_preference),
+
+        ] + TEMPLATE_IMPORTS.items()
+    )
+    return render_to_string('courseware/accordion.html', context)
+
+```
