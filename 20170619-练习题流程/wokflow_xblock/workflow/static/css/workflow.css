@@ -1,0 +1,73 @@
+/* CSS for WorkflowXBlock */
+.workflow_block .main_panel{
+    text-align:center
+}
+.workflow_block .btn {
+    margin-right: 10px;
+    padding: 8px 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    background-image: none;
+    box-shadow: none;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.workflow_block .btn_submit{
+ color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.workflow_block hr {
+
+    content: ' ';
+    width: 100%;
+    height: 3px;
+    background-color: #337AB7;
+    margin-bottom: 10px;
+
+}
+
+.workflow_block .main_panel .msg{
+    text-align:center;
+    color: #0448F5;
+}
+
+table.altrowstable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+table.altrowstable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.altrowstable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+
+.oddrowcolor{
+    background-color:white;
+}
+.evenrowcolor{
+    background-color:#c3dde0;
+
+}
