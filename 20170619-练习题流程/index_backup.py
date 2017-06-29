@@ -53,6 +53,7 @@ from ..module_render import toc_for_course, get_module_for_descriptor
 from .views import get_current_child, registered_for_course
 
 
+import pymongo
 log = logging.getLogger("edx.courseware.views.index")
 TEMPLATE_IMPORTS = {'urllib': urllib}
 CONTENT_DEPTH = 2
@@ -398,12 +399,16 @@ class CoursewareIndex(View):
             self.section_url_name,
             self.field_data_cache,
         )
+        #modify by zyni start
         courseware_context['accordion'] = render_accordion(
             self.request,
             self.course,
             table_of_contents['chapters'],
             courseware_context['language_preference'],
+            self.real_user.email,
+            self.is_staff,
         )
+        #modify by zyni end
 
         # entrance exam data
         if course_has_entrance_exam(self.course):
@@ -499,12 +504,45 @@ class CoursewareIndex(View):
             raise
 
 
-def render_accordion(request, course, table_of_contents, language_preference):
+def render_accordion(request, course, table_of_contents, language_preference,email, is_staff):
     """
     Returns the HTML that renders the navigation for the given course.
     Expects the table_of_contents to have data on each chapter and section,
     including which ones are active.
     """
+    #add by zyni start
+    #gen current status contents document according to table_of_contents
+    if not is_staff:
+        cur_status_contents={'email':email,'workflow':[]} 
+        for index,subsection in enumerate(table_of_contents):
+            cur_sub = {'url_name':subsection['url_name'],'display_name':subsection['display_name'],'visible':False}
+            if index==0:
+                cur_sub['visible']=True
+            cur_status_contents['workflow'].append(cur_sub)
+        #connect to MongoDB
+        conn = pymongo.Connection('localhost', 27017)
+        db = conn.test
+        db.authenticate("edxapp","p@ssw0rd")
+        result = db.workflow.find_one({'email':email}) #connect to collection
+        if result:
+            #update MongoDB status contents document
+            for index_n,item_n in enumerate(cur_status_contents['workflow']):
+                for index_o,item_o in enumerate(result['workflow']):
+                    if item_o['url_name'] == item_n['url_name']:
+                        cur_status_contents['workflow'][index_n]['visible']=result['workflow'][index_o]['visible']
+            db.workflow.update({"email":email},{"$set":{"workflow":cur_status_contents['workflow']}})
+           # log.info('ne_status_contents=%s\n',cur_status_contents)
+        else:
+            db.workflow.insert(cur_status_contents)
+            log.info('email=%s,create new_status_contents on db.workflow',email)
+        for item in cur_status_contents['workflow']:
+            if item['visible'] == False:
+                for index,item2 in enumerate(table_of_contents):
+                    if(item2['url_name'] == item['url_name']):
+                        del table_of_contents[index]
+
+        conn.disconnect()
+    #add by zyni end
     context = dict(
         [
             ('toc', table_of_contents),
